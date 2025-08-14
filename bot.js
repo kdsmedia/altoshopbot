@@ -2,9 +2,9 @@
 // --- IMPOR LIBRARY (DIPERBAIKI UNTUK COMMONJS) ---
 // =================================================================================================
 
-// Import library dengan menggunakan sintaks require() yang benar untuk Node.js
+// Import library dengan menggunakan CommonJS
 const { Client, LocalAuth, List, Buttons, MessageMedia } = require('whatsapp-web.js');
-require('dotenv').config(); // Langsung memanggil config() setelah me-require dotenv
+require('dotenv').config();
 const qrcode = require('qrcode-terminal');
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc, deleteDoc } = require('firebase/firestore');
