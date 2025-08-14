@@ -1,12 +1,14 @@
-// Import library dengan cara yang kompatibel dengan CommonJS
-import WhatsAppWeb from 'whatsapp-web.js';
-const { Client, LocalAuth, List, Buttons, MessageMedia } = WhatsAppWeb;
+// =================================================================================================
+// --- IMPOR LIBRARY (DIPERBAIKI UNTUK COMMONJS) ---
+// =================================================================================================
 
-import 'dotenv/config';
-import qrcode from 'qrcode-terminal';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
-import { GoogleGenerativeAI } from '@google/genai';
+// Import library dengan menggunakan sintaks require() yang benar untuk Node.js
+const { Client, LocalAuth, List, Buttons, MessageMedia } = require('whatsapp-web.js');
+require('dotenv').config(); // Langsung memanggil config() setelah me-require dotenv
+const qrcode = require('qrcode-terminal');
+const { initializeApp } = require('firebase/app');
+const { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc, deleteDoc } = require('firebase/firestore');
+const { GoogleGenerativeAI } = require('@google/genai');
 
 // =================================================================================================
 // --- KONFIGURASI & INISIALISASI ---
