@@ -1,5 +1,7 @@
+// Import library dengan cara yang kompatibel dengan CommonJS
 import WhatsAppWeb from 'whatsapp-web.js';
 const { Client, LocalAuth, List, Buttons, MessageMedia } = WhatsAppWeb;
+
 import 'dotenv/config';
 import qrcode from 'qrcode-terminal';
 import { initializeApp } from 'firebase/app';
