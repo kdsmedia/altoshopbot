@@ -1,9 +1,9 @@
-import 'dotenv/config';
 import WhatsAppWeb from 'whatsapp-web.js';
 const { Client, LocalAuth, List, Buttons, MessageMedia } = WhatsAppWeb;
+import 'dotenv/config';
 import qrcode from 'qrcode-terminal';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
 import { GoogleGenerativeAI } from '@google/genai';
 
 // =================================================================================================
@@ -42,6 +42,7 @@ if (process.env.GEMINI_API_KEY) {
 } else {
     console.warn("⚠️ Peringatan: GEMINI_API_KEY tidak ditemukan. Fitur Chatbot AI tidak akan aktif.");
 }
+
 
 // =================================================================================================
 // --- STATE & CACHE MANAGEMENT ---
