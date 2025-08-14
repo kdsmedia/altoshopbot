@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Bot WhatsApp Toko Online Interaktif",
-  "type": "module",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
