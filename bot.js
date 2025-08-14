@@ -1,5 +1,6 @@
+import WhatsAppWeb from 'whatsapp-web.js';
+const { Client, LocalAuth, List, Buttons, MessageMedia } = WhatsAppWeb;
 import 'dotenv/config';
-import { Client, LocalAuth, List, Buttons, MessageMedia } from 'whatsapp-web.js';
 import qrcode from 'qrcode-terminal';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, doc, getDoc, setDoc, getDocs, updateDoc, runTransaction, serverTimestamp, query, where, addDoc, deleteDoc } from 'firebase/firestore';
